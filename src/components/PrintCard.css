@@ -1,0 +1,31 @@
+.PrintCard {
+    text-align: left;
+  }
+  
+  
+  .PrintCard-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .PrintCard-title {
+    font-size: 1.5em;
+  }
+  
+  .PrintCard-intro {
+    font-size: large;
+  }
+
+  .col-md-4{
+    margin-left:35%;
+  }
+  .nav-bar{
+    width: 15%;
+    background-color: #303030;
+    color: white;
+    height: 100%;
+    top: 50px;
+    position: fixed;
+}

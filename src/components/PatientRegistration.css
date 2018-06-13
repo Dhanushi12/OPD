@@ -1,0 +1,22 @@
+.PatientRegistration {
+  text-align: left;
+}
+
+
+.PatientRegistration-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.PatientRegistration-title {
+  font-size: 1.5em;
+}
+
+.PatientRegistration-intro {
+  font-size: large;
+}
+
+
+
