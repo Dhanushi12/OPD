@@ -21,7 +21,7 @@ class PrintCard extends Component {
       <div className="PrintCard">
         <center><h1>Print Card</h1></center>
         <div className="row">
-        <div className="col-md-3"></div>
+          <div className="col-md-3"></div>
           <div className="col-md-5">
             <div className="card mb-3">
               <Card>
@@ -29,16 +29,16 @@ class PrintCard extends Component {
 
                 <CardBody>
                   <div className="card-body">
-                    <h5 className="card-subtitle text-muted">Patient Name :</h5>
-                    <h5 className="card-subtitle text-muted">Patient NIC :</h5>
+                    <h5 className="card-subtitle text-muted">Patient Name : {sessionStorage.getItem('patientname')}</h5>
+                    <h5 className="card-subtitle text-muted">Patient NIC :{sessionStorage.getItem('patientnic')}</h5>
 
                   </div>
                   <div>
 
-                    <Barcode value="123456789" />
+                    <Barcode value={sessionStorage.getItem('patientnic')} />
                   </div>
                 </CardBody>
-  
+
                 <ImageHeader style={{ height: '200px', width: '50%', display: 'block' }} imageSrc={patient} alt="Card image" />
 
                 <div className="card-body">
@@ -46,16 +46,14 @@ class PrintCard extends Component {
                 </div>
 
                 <div className="row">
-                  <div className="col-md-4">
-                    
-                  </div>
+                  <div className="col-md-4"></div>
                 </div>
               </Card>
             </div>
 
           </div>
         </div>
-        
+
       </div>
 
 
@@ -66,14 +64,14 @@ class PrintCard extends Component {
 class Print extends React.Component {
   render() {
     return (
-     
+
       <div>
-      <PrintCard ref={el => (this.componentRef = el)} />
+        <PrintCard ref={el => (this.componentRef = el)} />
         <ReactToPrint
-          trigger={() =>  <center><button type="Print" className="btn btn-primary">Print</button></center>}
+          trigger={() => <center><button type="Print" className="btn btn-primary">Print</button></center>}
           content={() => this.componentRef}
         />
-        
+
       </div>
     )
   }
