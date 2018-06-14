@@ -21,6 +21,7 @@ class PrintCard extends Component {
       <div className="PrintCard">
         <center><h1>Print Card</h1></center>
         <div className="row">
+        <div className="col-md-3"></div>
           <div className="col-md-5">
             <div className="card mb-3">
               <Card>
@@ -29,7 +30,7 @@ class PrintCard extends Component {
                 <CardBody>
                   <div className="card-body">
                     <h5 className="card-subtitle text-muted">Patient Name :</h5>
-                    <h5 className="card-subtitle text-muted">Patient HIN :</h5>
+                    <h5 className="card-subtitle text-muted">Patient NIC :</h5>
 
                   </div>
                   <div>
@@ -65,10 +66,11 @@ class PrintCard extends Component {
 class Print extends React.Component {
   render() {
     return (
+     
       <div>
       <PrintCard ref={el => (this.componentRef = el)} />
         <ReactToPrint
-          trigger={() =>  <button type="Print" className="btn btn-primary">Print</button>}
+          trigger={() =>  <center><button type="Print" className="btn btn-primary">Print</button></center>}
           content={() => this.componentRef}
         />
         

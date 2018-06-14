@@ -6,20 +6,28 @@ import OverviewOfPatient from './components/OverviewOfPatient';
 import registerServiceWorker from './registerServiceWorker';
 import PatientRegistration from './components/PatientRegistration';
 import PrintCard from './components/PrintCard';
-import {Root} from "./components/Root";
+//import {Root} from "./components/Root";
 
+
+import Header from"./components/Header";
+import Home from"./components/Home";
 
 class App  extends React.Component{
     render(){
         return(
             <Router>
-                <Root>
-                <Route path ="/patientregistration" component={PatientRegistration}/>
-                <Route path="/overviewofpatient" component={OverviewOfPatient}/>
-                <Route path="/printcard" component={PrintCard}/>
+                <div>
+                <div>
+                    <Header/>
+                    </div>
+                <Route path="/" component={Home}/>
+               <Route path ="/PatientRegistration" component={PatientRegistration}/>
+               <Route path="/overviewofpatient" component={OverviewOfPatient}/>
+                 <Route path="/printcard" component={PrintCard}/>
                 
                 
-                </Root>
+              
+                </div>
                 </Router>
         );
     }

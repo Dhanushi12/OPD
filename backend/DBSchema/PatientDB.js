@@ -5,6 +5,7 @@ const Schema=mongoose.Schema;
 
 
 const PatientSchema=new Schema({
+    Title:String,
     Full_Name:String,
     other_name:String,
     civil_status:String,

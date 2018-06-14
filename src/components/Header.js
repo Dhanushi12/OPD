@@ -1,18 +1,79 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, {Component}from "react";
+import { Link,NavLink } from "react-router-dom";
+import {Navbar,Nav,NavItem,NavDropdown,MenuItem} from 'react-bootstrap' 
 import './PrintCard.css';
 
 
-export const Header = (props) => {
+
+//export const Header = (props) => {
     //const div22 = {
     //  width: '270px',
     //  height: '1000px'
     // };
+class Header extends Component{
+    render(){
+        return(
+            <div className="Header">
+               <Navbar inverse collapseOnSelect>
+  <Navbar.Header>
+    <Navbar.Brand>
+      <a href="#brand">React-Bootstrap</a>
+    </Navbar.Brand>
+    <Navbar.Toggle />
+  </Navbar.Header>
+  <Navbar.Collapse>
+    <Nav>
+      <NavItem eventKey={1} >
+        <NavLink to ="/Home">Home</NavLink>
+      </NavItem>
+      <NavItem eventKey={2} href="#">
+        Link
+      </NavItem>
+      <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
+        <MenuItem eventKey={3.1}>Action</MenuItem>
+        <MenuItem eventKey={3.2}>Another action</MenuItem>
+        <MenuItem eventKey={3.3}>Something else here</MenuItem>
+        <MenuItem divider />
+        <MenuItem eventKey={3.3}>Separated link</MenuItem>
+      </NavDropdown>
+    </Nav>
+    <Nav pullRight>
+      <NavItem eventKey={1} href="#">
+        Link Right
+      </NavItem>
+      <NavItem eventKey={2} href="#">
+        Link Right
+      </NavItem>
+    </Nav>
+  </Navbar.Collapse>
+</Navbar>
+<div className="nav-bar"></div>
+            </div>
+            
+        );
+    }
+}
+ export default Header;   
 
-    return (
+      
 
-       <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           /*<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
                 <a className="navbar-brand" >OPD</a>
                
 
@@ -24,17 +85,17 @@ export const Header = (props) => {
                        
                     </ul>
                 </div>
-            </nav>
+    </nav>*/
           
 
-           {/* <div className="card text-white bg-secondary mb-3" style={{ width: '20%', height: '100vh', }} >
+           /* <div className="card text-white bg-secondary mb-3" style={{ width: '20%', height: '100vh', }} >
                 <div className="card-header">Header</div>
                 <div className="card-body">
                     <h4 className="card-title">Secondary card title</h4>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
-    </div>*/}
-        </div>
+    </div>*/
+        
 
 
         //<nav >
@@ -47,5 +108,3 @@ export const Header = (props) => {
         // </div>
         //  </div>
         // </nav>
-    );
-};
